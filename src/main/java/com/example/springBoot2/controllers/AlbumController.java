@@ -21,7 +21,7 @@ public class AlbumController {
     }
 
     @GetMapping("/{id}")
-    public Album getItem( @PathVariable int id) {
+    public Album getItem( @PathVariable int id ) {
         return albumRepository.findById(id).orElse(null);
     }
 
@@ -42,5 +42,4 @@ public class AlbumController {
         albumRepository.deleteById(id);
         return reportAlbum;
     }
-
 }
